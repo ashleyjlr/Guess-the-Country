@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+  <title>Guess that Country!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Bulma Version 0.9.0-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/hero.css">
+  <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+  <style>
+    .columns:nth-child(2) {
+      margin-top: -10rem;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero is-info is-small has-background-danger-light has-text-danger-dark" id="title">
+    <div class="hero-body has-background-danger-light has-text-danger-dark">
+      <div class="container has-text-centered has-background-danger-light has-text-danger-dark">
+        <p class="title has-background-danger-light has-text-danger-dark">
+          Guess that Country!
+        </p>
+        <p class="subtitle has-background-danger-light has-text-danger-dark">
+          A fun game to test your knowledge on our big world.
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="box cta">
+    <p class="has-text-centered">
+      <span class="tag is-primary">HEY!</span> If you are geographically gifted, you have a chance at winning our grand prize. Get all countries correct to qualify!
+    </p>
+  </div>
+  <section class="container">
+    <div class="columns features">
+      <div class="column is-4">
+        <div class="card is-shady">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img
+                src="https://www.worldtravelguide.net/wp-content/uploads/2017/03/shu-Japan-Nachisan-Seiganto_189118511-1440x823-1.jpg"
+                alt="Placeholder image" class="modal-button" data-target="modal-image2">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4>Country In Asia!</h4>
+              <p>It houses the Most Populated City 🏙  in the World 🌎 with rich culture. A harmony of traditional landmarks and innovative technology.</p>
+              <span class="button is-link modal-button has-background-danger-light has-text-danger-dark" data-target="modal-card22">Guess here!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-4">
+        <div class="card is-shady">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img
+                src="https://static.euronews.com/articles/stories/06/61/81/86/1000x563_cmsv2_e6f65f2c-0cbb-5c19-b852-20178b069047-6618186.jpg"
+                alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4>Country in Africa!</h4>
+              <p>It's a top Baecation spot. When you think of it, you see clear, blue waters 🌊🌊 and nice bungalows hovering over beautiful views!</p>
+              <span class="button is-link modal-button has-background-danger-light has-text-danger-dark" data-target="modal-card">Guess here!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-4 modal-button" data-target="modal-card33">
+        <div class="card is-shady">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img
+                src="https://uceap.universityofcalifornia.edu/sites/default/files/marketing-images/country-page-images/new-zealand-page-header.jpg"
+                alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4>Country in Oceania!</h4>
+              <p>Land of great contrasts and diversity. Active volcanoes, deep glacier lakes, long sandy beaches, and the spectacular snowcapped peaks</p>
+              <span class="button is-link modal-button has-background-danger-light has-text-danger-dark" data-target="model-card33">Guess here!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <section class="section">
+      <div class="container" id="reveal44" style="display: none"> 
+        <div class="columns is-centered ">
+          <div class="column is-half">
+            <article class="notification media has-background-danger-light has-text-danger-dark">
+              <figure class="media-left">
+<!--                 <span class="icon">
+                  <i class="has-text-warning fa fa-columns fa-lg"></i>
+                </span> -->
+              </figure>
+              <div class="media-content">
+                <div class="content"><center>
+                  <h1 class="title is-size-4">Roll for a free** trip!!</h1>
+                  <p class="is-size-5 subtitle">
+                    Ever wanted to see the <strong>beauty</strong> in the world?
+                  </p>
+                  <input type="button" class="button has-background-primary has-text-white-bis" id="btnSearch" value="Search" onclick="GetValue();" />
+                  <h2 id="message"></h2>
+                  <p id="small">**Not actually free and not actually a trip ¯\_(ツ)_/¯</p>
+
+                </div> </center>
+              </div>
+            </article>
+          </div>
+<!--           <div class="column is-one-third">
+            <article class="notification has-background-white media">
+              <figure class="media-left">
+                <span class="icon has-text-info">
+                  <i class="fa fa-lg fa-wpforms"></i>
+                </span>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h1 class="title is-size-4">Form</h1>
+                  <p class="is-size-5 subtitle">
+                    The indispensable <strong>form controls</strong>, designed for maximum clarity
+                  </p>
+                  <figure class="image is-16by9">
+  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe>
+</figure>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="notification has-background-white media">
+              <figure class="media-left">
+                <span class="icon has-text-danger">
+                  <i class="fa fa-lg fa-cubes"></i>
+                </span>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h1 class="title is-size-4">Components</h1>
+                  <p class="is-size-5 subtitle">
+                    Advanced multi-part components with lots of possibilities
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="notification has-background-white media">
+              <figure class="media-left">
+                <span class="icon has-text-grey">
+                  <i class="fa fa-lg fa-cogs"></i>
+                </span>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h1 class="title is-size-4">Modifiers</h1>
+                  <p class="is-size-5 subtitle">
+                    An <strong>easy-to-read</strong> naming system designed for humans
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="notification has-background-white media">
+              <figure class="media-left">
+                <span class="icon has-text-primary">
+                  <i class="fa fa-lg fa-superpowers"></i>
+                </span>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h1 class="title is-size-4">Layout</h1>
+                  <p class="is-size-5 subtitle">
+                    Design the <strong>structure</strong> of your webpage with these CSS classes
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="notification has-background-white media">
+              <figure class="media-left">
+                <span class="icon has-text-danger">
+                  <i class="fa fa-lg fa-cube"></i>
+                </span>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h1 class="title is-size-4">Elements</h1>
+                  <p class="is-size-5 subtitle">
+                    Essential interface elements that only require a <strong>single CSS class</strong>
+                  </p>
+                </div> -->
+              </div>
+            </article>
+          </div>
+    </section>
+    <div class="content has-text-centered">
+      <div class="control level-item">
+        <a href="https://github.com/BulmaTemplates/bulma-templates">
+          <div class="tags has-addons">
+              <a class="button has-background-primary has-text-white-bis" href="">Click here to try again or test your friends</a>
+            <br>
+<!--             <span class="tag is-dark">Bulma Templates</span>
+            <span class="tag is-info">MIT license</span> -->
+          
+          </div>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!--  ===============
+    HERE BE MODALS
+    ===============  -->
+
+  <!-- 3dFlipVertical card tiny 1-->
+  <div id="modal-card" class="modal modal-fx-3dSlit">
+    <div class="modal-background"></div>
+    <div class="modal-content is-tiny">
+      <!-- content -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="https://www.outofoffice.com/wp-content/uploads/Four-seasons-seychelles.jpg" alt="Japan">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="https://cdn.britannica.com/93/4093-004-A9F95AC3/Flag-Seychelles.jpg"
+                  alt="linda barret avatar">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">What country is this?</p>
+              <p class="subtitle is-6">Hmm...</p>
+            </div>
+          </div>
+          <div class="content" id="reveal" style="display: none">
+            <ul>
+              <li>Seychelles were once home to crocodiles</li>
+<li>The local delicacy is fruitbat curry</li>
+<li>Moyenne island is haunted!</li>
+<li>There’s buried treasure waiting to be found</li>
+<li>Moyenne island is haunted! (allegedly)</li>
+<li>There are two UNESCO World Heritage Sites</li>
+<li>There are no indigenous people</li>
+<li>Seychelles Is Over 99% water</li>
+<li>The biggest nut in the world (yes, the Coco de Mer weighs up to 20kg)</li>
+<li>The biggest tortoise in the world (Esmeralda, who is actually male, is the world’s largest tortoise at almost 300kg).</li>
+              </ul>
+            <br>
+            <a>@trip2</a>
+            <a href="#">#Getaway</a>
+            <a href="#">#Seychelles</a>
+            <br>
+            
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Seychelles">Click here to learn even more!!!</a>
+            <br>
+          </div>
+
+          <input id="guess" class="input is-primary is-large" type="text" name="language"
+            placeholder="Guess the country!" />
+
+        </div>
+      </div>
+      <!-- end content -->
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+
+
+  <div id="modal-card22" class="modal modal-fx-3dSlit">
+    <div class="modal-background"></div>
+    <div class="modal-content is-tiny">
+      <!-- content -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img
+              src="https://static01.nyt.com/images/2020/03/26/world/26japan-virus01/merlin_170980464_6560314b-4036-4d1f-a729-24e20212a1cf-superJumbo.jpg"
+              alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png"
+                  alt="flag of japan">
+              </figure>
+            </div>
+            <div class="media-content">
+               <p class="title is-4">What country is this?</p>
+              <p class="subtitle is-6">Hmm...</p>
+            </div>
+          </div>
+          <div class="content" id="reveal22" style="display: none">
+            
+          <section ">
+            <ul>
+            <li>The oldest company in the world is in Japan</li>
+            <li> Japan has the 11th largest population in the world</li>
+            <li>The Japanese live (almost) the longest</li>
+            <li>In Japan there is 1 vending machine for every 24 people</li>
+            <li>Japanese melons can cost you over $200</li>
+            <li>Nearly half the zippers worldwide are made in Japan</li>
+            <li>In japanese culture it is polite to remove your shoes</li>
+            <li>Over 80% of land in Japan is mountainous</li>
+            <li>Japan once had the world’s largest fish market</li>
+            <li>Japan imports over 80% of Jamaica's annual coffee production</li>
+            </ul>
+          </section>
+            <br>
+            <a>@trip1</a>
+            <a href="#">#Japan</a>
+            <a href="#">#Nature</a>
+            <br>
+            
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Japan">Click here to learn even more!!!</a>
+            <br>
+          </div>
+
+          <input id="guess22" class="input is-primary is-large" type="text" name="language"
+            placeholder="Guess the country!" />
+
+        </div>
+      </div>
+      <!-- end content -->
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+
+
+
+  <div id="modal-card33" class="modal modal-fx-3dSlit">
+    <div class="modal-background"></div>
+    <div class="modal-content is-tiny">
+      <!-- content -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img
+              src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/LakeWakatipuNewZealand.jpg?crop=0%2C25%2C4000%2C2200&wid=4000&hei=2200&scl=1.0"
+              alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/640px-Flag_of_New_Zealand.svg.png">
+              </figure>
+            </div>
+            <div class="media-content">
+               <p class="title is-4">What country is this?</p>
+              <p class="subtitle is-6">Hmm...</p>
+            </div>
+          </div>
+          <div class="content" id="reveal33" style="display: none">
+            <ul> 
+            <li>The first country with universal suffrage</li> 
+<li>The kiwi is not only a fruit (it’s a bird too!)</li>
+<li>You can pay with hobbit money (yup, Lord of The Rings Hobbit)</li>
+<li>30% of the country is a national reserve</li>
+<li>The town with the longest name in the world:</li>
+              <p>Taumatawhakatangihangakoau auotamateaturipukakap ikimaungahoronukupokaiw henuakitanatahu</p>
+<li>More sheep than people</li>
+<li>Dunedin has the steepest road in the world</li>
+<li>It has the most southerly capital in the world</li>
+<li>There are three official languages including Maori</li>
+<li>It was the last country in the world to be inhabited by humans</li>
+
+
+
+              </ul>
+            <a>@trip3</a>
+            <a href="#">#NZ</a>
+            <a href="#">#NewZealand</a>
+            <br>
+      
+            <br>
+            <a href="https://en.wikipedia.org/wiki/New_Zealand">Click here to learn even more!!!</a>
+            <br>
+          </div>
+
+          <input id="guess33" class="input is-primary is-large" type="text" name="language"
+            placeholder="Guess the country!" />
+        </div>
+      </div>
+      <!-- end content -->
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- end tiny modal card -->
+  <!-- 3dFlipVertical card tiny [butterfly] -->
+  <div id="modal-card2" class="modal modal-fx-3dSlit">
+    <div class="modal-background"></div>
+    <div class="modal-content is-tiny">
+      <!-- content -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img
+              src="https://www.worldtravelguide.net/wp-content/uploads/2017/03/shu-Japan-Nachisan-Seiganto_189118511-1440x823-1.jpg"
+              alt="butterfly">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png"
+                  alt="linda barret avatar">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Jane Doe</p>
+              <p class="subtitle is-6">@jane_doe</p>
+            </div>
+          </div>
+          <div class="content">
+            <ul>
+              <li>The first country with universal suffrage</li>
+<li>The kiwi is not only a fruit(It’s a bird too!)</li>
+<li>You can pay with hobbit money(Yup, Lord of The Rings Hobbit)</li>
+<li>30% of the country is a national reserve</li>
+<li>The town with the longest name in the world(Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu)
+</li>
+<li>More sheep than people</li>
+<li>Dunedin has the steepest road in the world</li>
+<li>It has the most southerly capital in the world</li>
+<li>There are three official languages including Maori</li>
+
+</ul>
+
+            <a>@bulmaio</a>.
+            <a href="#">#css</a>
+            <a href="#">#responsive</a>
+            <br>
+            <time datetime="2018-02-02">12:45 AM - 20 May 2018</time>
+          </div>
+        </div>
+      </div>
+      <!-- end content -->
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <!-- end tiny modal card -->
+  <!-- Image modal -->
+  <div id="modal-image2" class="modal modal-fx-3dSlit">
+    <div class="modal-background"></div>
+    <div class="modal-content is-huge is-image">
+      <!-- content -->
+      <img src="https://source.unsplash.com/RWnpyGtY1aU" alt="image">
+      <!-- end content -->
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <!-- Image modal -->
+  <div id="modal-image4" class="modal modal-fx-3dSlit">
+    <div class="modal-background"></div>
+    <div class="modal-content is-huge is-image">
+      <!-- content -->
+      <img src="https://source.unsplash.com/hLyd1LukQ7E" alt="butterfly">
+      <!-- end content -->
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <!-- Image modal-->
+  <div id="modal-image" class="modal modal-fx-superScaled">
+    <div class="modal-background"></div>
+    <div class="modal-content  is-image">
+      <!-- content -->
+      <img src="https://res.cloudinary.com/ameo/image/upload/v1568711475/pexels-photo-1302883_fjje0f.jpg"
+        alt="Placeholder image">
+      <!--     <img src="https://source.unsplash.com/zFrUz_tNjCY" alt="placeholder">
+        -->
+      <!-- end content -->
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>
+  <script src="script.js"></script>
+  <script src="../js/wild.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      //The first argument are the elements to which the plugin shall be initialized
+      //The second argument has to be at least a empty object or a object with your desired options
+      OverlayScrollbars(document.querySelectorAll("body"), {});
+    });
+  </script>
+</body>
+
+</html>
